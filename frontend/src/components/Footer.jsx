@@ -15,8 +15,8 @@ const Footer = () => {
                     <div>
                         <h3 className="text-lg font-semibold mb-4">Liên kết nhanh</h3>
                         <ul className="space-y-2">
-                            <li><a href="#" className="text-gray-400 hover:text-white">Thời khóa biểu</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white">Lịch thi</a></li>
+                            <li><a href="/thoi-khoa-bieu" className="text-gray-400 hover:text-white">Thời khóa biểu</a></li>
+                            <li><a href="/lich-thi" className="text-gray-400 hover:text-white">Lịch thi</a></li>
                             <li><a href="#" className="text-gray-400 hover:text-white">Tài liệu học tập</a></li>
                             <li><a href="#" className="text-gray-400 hover:text-white">Cổng thông tin sinh viên</a></li>
                         </ul>

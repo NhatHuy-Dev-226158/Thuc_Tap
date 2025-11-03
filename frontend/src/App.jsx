@@ -6,7 +6,10 @@ import MainLayout from './layouts/MainLayout';
 
 // --- Import Các Trang Public ---
 import HomePage from './pages/HomePage';
-
+import NewsPage from './pages/NewsPage';
+import LoginPage from "./pages/LoginPage";
+import ThoiKhoaBieu from './pages/ThoiKhoaBieu.jsx';
+import ExamSchedule from './pages/ExamSchedule/ExamSchedule';
 
 function App() {
   return (
@@ -15,11 +18,11 @@ function App() {
         {/* === CÁC ROUTE PUBLIC (Bọc bằng MainLayout) === */}
         <Route element={<MainLayout />}>
           <Route path="/" element={<HomePage />} />
-          {/* <Route path="/login" element={<LoginPage />} />
-            <Route path="/thoi-khoa-bieu" element={<TimeTablePage />} />
-            <Route path="/lich-thi" element={<ExamPage />} /> */}
+          <Route path="/NewsPage" element={<NewsPage />} />
+          <Route path="/thoi-khoa-bieu" element={<ThoiKhoaBieu />} />
+          <Route path="/lich-thi" element={<ExamSchedule />} />
         </Route>
-        {/* Route cho 404 (Không tìm thấy) */}
+        <Route path="/LoginPage" element={<LoginPage />} />
         <Route path="*" element={<h1>404 - Trang không tồn tại</h1>} />
       </Routes>
     </BrowserRouter>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const IconLogin = () => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 mr-2 -ml-1">
@@ -51,7 +52,7 @@ const Header = () => {
                 <nav className="relative flex justify-between items-center h-20 px-8 bg-white/90 backdrop-blur-xl rounded-full shadow-lg border border-gray-200/75">
 
                     {/* --- PHẦN LOGO  --- */}
-                    <a href="#" className="flex items-center space-x-3 group">
+                    <a href="/" className="flex items-center space-x-3 group">
                         <img
                             src="/logo.png"
                             alt="Logo Khoa CNTT"
@@ -69,21 +70,20 @@ const Header = () => {
 
                     {/* --- NAV MENU--- */}
                     <div className="hidden md:flex items-center space-x-10">
-                        <NavLink href="#">Trang Chủ</NavLink>
-                        <NavLink href="#">Xem kế hoạch</NavLink>
-                        <NavLink href="#">Thời khóa biểu</NavLink>
-                        <NavLink href="#">Lịch Thi</NavLink>
+                        <NavLink href="/">Trang Chủ</NavLink>
+                        <NavLink href="/NewsPage">Tin tức & sự kiên</NavLink>
+                        <NavLink href="/thoi-khoa-bieu">Thời khóa biểu</NavLink>
+                        <NavLink href="/lich-thi">Lịch Thi</NavLink>
                     </div>
 
                     {/* --- NÚT ĐĂNG NHẬP --- */}
                     <div className="hidden md:flex">
-                        <a
-                            href="#"
-                            className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-linear-to-r from-blue-600 to-blue-500 rounded-full shadow-md hover:from-blue-700 hover:to-blue-600 transform hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                        >
+                        <Link
+                            to="/LoginPage"
+                            className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-gradient-to-r from-blue-600 to-blue-500 rounded-full shadow-md hover:from-blue-700 hover:to-blue-600 transform hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
                             <IconLogin />
                             Đăng Nhập
-                        </a>
+                        </Link>
                     </div>
 
                     {/* --- NÚT BẤM MENU  --- */}
